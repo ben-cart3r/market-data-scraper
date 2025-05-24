@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "function"
+version = "0.1.0"
+description = ""
+authors = ["Ben Carter <ben.carter@justice.gov.uk>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+aws-lambda-powertools = {extras = ["parser"], version = "^3.13.0"}
+yfinance = "^0.2.61"
+flake8 = "^7.2.0"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^6.0.1"
+black = "^25.1.0"
+pytest = "^8.3.5"
+mypy = "^1.15.0"
+moto = {extras = ["dynamodb"], version = "^5.1.4"}
+mypy-boto3-dynamodb = "^1.38.4"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning:botocore.*"
+]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+    
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

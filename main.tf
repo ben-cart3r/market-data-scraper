@@ -2,7 +2,7 @@ data "aws_caller_identity" "current" {}
 
 module "function" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "7.8.1"
+  version = "7.21.0"
 
   create_function = var.create
   create_package  = var.create_package

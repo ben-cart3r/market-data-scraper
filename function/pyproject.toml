@@ -17,7 +17,7 @@ isort = "^6.0.1"
 black = "^25.1.0"
 pytest = "^8.3.5"
 mypy = "^1.15.0"
-moto = {extras = ["dynamodb"], version = "^5.1.4"}
+moto = {extras = ["dynamodb"], version = "^5.1.5"}
 mypy-boto3-dynamodb = "^1.38.4"
 
 [tool.pytest.ini_options]

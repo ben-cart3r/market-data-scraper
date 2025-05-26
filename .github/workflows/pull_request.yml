@@ -112,6 +112,7 @@ jobs:
           kill $(lsof -t -i:5000)
 
   terraform-docs:
+    name: Validate documentation
     permissions:
       pull-requests: write
       contents: write

@@ -78,6 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TF_VAR_create: false
+      TF_VAR_table_name: test-table
     steps:
       - name: Checkout
         uses: actions/checkout@v4
